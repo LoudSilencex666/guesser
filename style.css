@@ -1,6 +1,201 @@
+
+@font-face {
+    font-family:'ufo';
+    src: url('fonts/ufo.ttf') format('truetype');
+    
+
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family:'Gravedigger';
+    src: url('fonts/Gravedigger.otf') format('truetype');
+    
+
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html, body {
     margin: 0;
-    background: #222222;
+    background: rgba(0, 0, 0, 1);
+    height: 100%;
+    overflow: hidden;
 }
 
 canvas { }
+
+.menu-container {
+    width: 90%;
+    height: 90%;
+    top: 0;
+    left: 5%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99999999;
+}
+
+.option-container {
+    width: 30%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#logo {
+    width: 100%;
+    height: 60%;
+}
+
+.option {
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 35pt;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    font-family: 'ufo';
+    cursor: pointer;
+    transition-duration: 0.8s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-duration: 0.7s;
+    opacity: 0; 
+}
+
+.option:nth-of-type(1) {
+    top: 0%;
+    animation-name: menu1;
+    animation-delay: 0;
+} 
+
+.option:nth-of-type(1):hover {
+    color: #6EE839;
+} 
+
+.option:nth-of-type(2) {
+    top: 21.25%;
+    animation-name: menu2;
+    animation-delay: .3s;
+} 
+
+.option:nth-of-type(2):hover {
+    color:#FFC410;
+} 
+
+.option:nth-of-type(3) {
+    top: 42.50%;
+    animation-name: menu3;
+    animation-delay: .6s;
+} 
+
+.option:nth-of-type(3):hover {
+    color: #FF100D;
+} 
+
+.option:nth-of-type(4) {
+    top: 63.75%;
+    animation-name: menu4;
+    animation-delay: .9s;
+} 
+
+.option:nth-of-type(4):hover {
+    color: #387EFF;
+} 
+
+.option:nth-of-type(5) {
+    top: 85%;
+    animation-name: menu5;
+    animation-delay: 1.2s;
+} 
+
+.option:nth-of-type(5):hover {
+    color: #7823E8;
+} 
+
+@keyframes menu1 {
+    from {
+        left: 130%;
+        top: -40%;
+        opacity: 0;
+    }
+
+    to {
+        left: 0%;
+        top: 0%;
+        opacity: 1;
+    }
+}
+
+@keyframes menu2 {
+    from {
+        left: 130%;
+        top: -40%;
+        opacity: 0;
+    }
+
+    to {
+        left: 0%;
+        top: 21.25%;
+        opacity: 1;
+    }
+}
+
+
+@keyframes menu3 {
+    from {
+        left: 130%;
+        top: -40%;
+        opacity: 0;
+    }
+
+    to {
+        left: 0%;
+        top: 42.50%;
+        opacity: 1;
+    }
+}
+
+
+@keyframes menu4 {
+    from {
+        left: 130%;
+        top: -40%;
+        opacity: 0;
+    }
+
+    to {
+        left: 0%;
+        top: 63.75%;
+        opacity: 1;
+    }
+}
+
+
+@keyframes menu5 {
+    from {
+        left: 130%;
+        top: -40%;
+        opacity: 0;
+    }
+
+    to {
+        left: 0%;
+        top: 85%;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "galacticguesser",
+  "version": "1.0.0",
+  "description": "The best guessing game in da World",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "build": "babel app --watch --out-dir dist"
+  },
+  "author": "Bartosz Brzózka & Damian Giedrojć",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-systemjs": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "text-2-json": "^1.0.4"
+  }
+}

@@ -4,17 +4,87 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
+        
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Guesser</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styleinterface.css">
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Russo+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <canvas id="guesser" width='600px' height='600px'>  
+        <canvas id="guesser">  
 
-        </canvas>
-        <script src="scripts.js"></script>
+        </canvas>  
+
+        <div class="menu-container">
+            <canvas id="logo"></canvas>
+            <div class="option-container">
+                <div class="option easy">easy</div>
+                <div class="option medium">medium</div>
+                <div class="option hard">hard</div>
+                <div class="option image">image</div>
+                <div class="option credits">credits</div>
+            </div>
+        </div>
+
+        <div class="ui-container">
+            <div class="answer-container">
+                <i class="fa fa-gear" style="font-size: 40px;"></i>
+                <form>
+
+                <input id="answer" type="text" autofocus>
+                <button class="button"> ENTER</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="stage">
+            <div class="stage-text">stage</div>
+            <div class="stage-number"></div>
+        </div>
+
+        <div class="score">
+            <div class="score-text">score</div>
+            <div class="score-number"></div>
+        </div>
+
+        <div class="post-game-stats">
+            <div class="post-game-container">
+                <div class="post-game-title">
+                    YOUR GAME PERFORMANCE
+                </div>
+                <div class="post-game-score-text">
+                    SCORE
+                </div>
+                <div class="post-game-score-number">
+                    2
+                </div>
+                <div class="post-game-stage-text">
+                    SUCCESSFUL STAGES
+                </div>
+                <div class="post-game-stage-number">
+                </div>
+            </div>
+            <button class="continue-button">
+                CONTINUE
+            </button>
+        </div>
+        
+        <div class="image-container">
+            <input type="file" id='zipa' class="loadImage">
+            <label for='zipa'>Choose a file</label>
+        </div>
+        
+        <script src="thirdparty/system.js"></script>
+        <script>
+            System.config({ "baseURL": "dist" });
+            System.import("main.js");
+         </script>
     </body>
 </html>
