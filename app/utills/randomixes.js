@@ -1,7 +1,7 @@
 import { canvas } from '../globalVars/canvas.js';
 import * as circleVars from '../globalVars/circle.js';
 import { Circle } from '../sprites/circle.js';
-import { image, wyjebanyArray, wyjebanyArray2 } from '../globalVars/images.js';
+import { image, imageArray, imageArray2 } from '../globalVars/images.js';
 
 let founder = {
     found: false
@@ -50,17 +50,17 @@ const randomixImage = () => {
     let resultRGBA1;
     let resultRGBA2;
 
-    if (wyjebanyArray2.length >= 0) {
+    if (imageArray2.length >= 0) {
 
-        let index = Math.floor(Math.random() * (wyjebanyArray2.length -1 + 1)) + 0;
+        let index = Math.floor(Math.random() * (imageArray2.length -1 + 1)) + 0;
 
     
-        resultX = wyjebanyArray2[index].x;
-        resultY = wyjebanyArray2[index].y;
-        resultRGBA1 = wyjebanyArray2[index].rgba1;
-        resultRGBA2 = wyjebanyArray2[index].rgba2;
+        resultX = imageArray2[index].x;
+        resultY = imageArray2[index].y;
+        resultRGBA1 = imageArray2[index].rgba1;
+        resultRGBA2 = imageArray2[index].rgba2;
 
-        wyjebanyArray2.splice(index, 1);
+        imageArray2.splice(index, 1);
 
         circleVars.x = resultX;
         circleVars.y = resultY;
@@ -78,14 +78,14 @@ const randomixCredits = () => {
     let resultRGBA1;
     let resultRGBA2;
     
-    if (wyjebanyArray2.length >= 1) {
+    if (imageArray2.length >= 1) {
 
-        let index = Math.floor(Math.random() * (wyjebanyArray2.length -1 + 1)) + 0;
+        let index = Math.floor(Math.random() * (imageArray2.length -1 + 1)) + 0;
 
-        resultX = wyjebanyArray2[index].x;
-        resultY = wyjebanyArray2[index].y;
-        resultRGBA1 = wyjebanyArray2[index].rgba1;
-        resultRGBA2 = wyjebanyArray2[index].rgba2;
+        resultX = imageArray2[index].x;
+        resultY = imageArray2[index].y;
+        resultRGBA1 = imageArray2[index].rgba1;
+        resultRGBA2 = imageArray2[index].rgba2;
 
         if (resultRGBA1 === 'rgba(0, 0, 0, 1)') {
             circleVars.x = resultX;
@@ -95,8 +95,8 @@ const randomixCredits = () => {
             founder.found = true;
         }
         
-        if (wyjebanyArray2.length !== 0) {
-            wyjebanyArray2.splice(index, 1);
+        if (imageArray2.length !== 0) {
+            imageArray2.splice(index, 1);
         }
 
     }

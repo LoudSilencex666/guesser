@@ -1,5 +1,5 @@
 import { gameMode } from '../globalVars/gameMode.js';
-import { wyjebanyArray, wyjebanyArray2, imageRGBA } from '../globalVars/images.js';
+import { imageArray, imageArray2, imageRGBA } from '../globalVars/images.js';
 import { canvas } from '../globalVars/canvas.js';
 import * as font from '../globalVars/font.js';
 import { credits } from '../globalVars/words.js';
@@ -22,7 +22,7 @@ export function gameCreditsSetup() {
 
     for (let i = 0; i < canvas.h/2; i++) {
         for(let j = 0; j < canvas.w; j++) {
-            wyjebanyArray.push({
+            imageArray.push({
                 x : j,
                 y : i
             })
@@ -30,15 +30,15 @@ export function gameCreditsSetup() {
     }
 
     let index = 0;
-    for (let i = 0; i < wyjebanyArray.length; i++) {
-        wyjebanyArray[i].rgba1 = `rgba(${imageRGBA[0][index]}, ${imageRGBA[0][index+1]}, ${imageRGBA[0][index+2]}, ${imageRGBA[0][index+3]/255})`;
-        wyjebanyArray[i].rgba2 = `rgba(${imageRGBA[0][index]}, ${imageRGBA[0][index+1]}, ${imageRGBA[0][index+2]}, ${imageRGBA[0][index+3]/255})`;
+    for (let i = 0; i < imageArray.length; i++) {
+        imageArray[i].rgba1 = `rgba(${imageRGBA[0][index]}, ${imageRGBA[0][index+1]}, ${imageRGBA[0][index+2]}, ${imageRGBA[0][index+3]/255})`;
+        imageArray[i].rgba2 = `rgba(${imageRGBA[0][index]}, ${imageRGBA[0][index+1]}, ${imageRGBA[0][index+2]}, ${imageRGBA[0][index+3]/255})`;
 
         index += 4;
     }
 
-    for (let i = 0; i < wyjebanyArray.length; i += 4) {
-        wyjebanyArray2.push(wyjebanyArray[i])
+    for (let i = 0; i < imageArray.length; i += 4) {
+        imageArray2.push(imageArray[i])
     }
 
     let dinosaur = new Image();
